@@ -13,6 +13,10 @@
 		7CB23F521BA407F10014022B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CB23F511BA407F10014022B /* Images.xcassets */; };
 		7CB23F551BA407F10014022B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CB23F531BA407F10014022B /* LaunchScreen.xib */; };
 		7CB23F611BA407F20014022B /* exposhowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB23F601BA407F20014022B /* exposhowTests.swift */; };
+		7CB23F6B1BA4087C0014022B /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CB23F6A1BA4087C0014022B /* map.png */; };
+		7CB23F6F1BA467780014022B /* pavilions.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7CB23F6E1BA467780014022B /* pavilions.csv */; };
+		7CB23F711BA475440014022B /* PavilionsMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB23F701BA475440014022B /* PavilionsMap.swift */; };
+		7CB23F731BA4824B0014022B /* ImageMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB23F721BA4824B0014022B /* ImageMap.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		7CB23F5A1BA407F20014022B /* exposhowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = exposhowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CB23F5F1BA407F20014022B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7CB23F601BA407F20014022B /* exposhowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exposhowTests.swift; sourceTree = "<group>"; };
+		7CB23F6A1BA4087C0014022B /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
+		7CB23F6E1BA467780014022B /* pavilions.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pavilions.csv; sourceTree = "<group>"; };
+		7CB23F701BA475440014022B /* PavilionsMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PavilionsMap.swift; sourceTree = "<group>"; };
+		7CB23F721BA4824B0014022B /* ImageMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageMap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +85,15 @@
 		7CB23F471BA407F10014022B /* exposhow */ = {
 			isa = PBXGroup;
 			children = (
-				7CB23F4A1BA407F10014022B /* AppDelegate.swift */,
+				7CB23F6A1BA4087C0014022B /* map.png */,
+				7CB23F6E1BA467780014022B /* pavilions.csv */,
+				7CB23F701BA475440014022B /* PavilionsMap.swift */,
+				7CB23F721BA4824B0014022B /* ImageMap.swift */,
 				7CB23F4C1BA407F10014022B /* ViewController.swift */,
 				7CB23F4E1BA407F10014022B /* Main.storyboard */,
 				7CB23F511BA407F10014022B /* Images.xcassets */,
 				7CB23F531BA407F10014022B /* LaunchScreen.xib */,
+				7CB23F4A1BA407F10014022B /* AppDelegate.swift */,
 				7CB23F481BA407F10014022B /* Supporting Files */,
 			);
 			path = exposhow;
@@ -192,6 +204,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CB23F6B1BA4087C0014022B /* map.png in Resources */,
+				7CB23F6F1BA467780014022B /* pavilions.csv in Resources */,
 				7CB23F501BA407F10014022B /* Main.storyboard in Resources */,
 				7CB23F551BA407F10014022B /* LaunchScreen.xib in Resources */,
 				7CB23F521BA407F10014022B /* Images.xcassets in Resources */,
@@ -213,6 +227,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CB23F4D1BA407F10014022B /* ViewController.swift in Sources */,
+				7CB23F711BA475440014022B /* PavilionsMap.swift in Sources */,
+				7CB23F731BA4824B0014022B /* ImageMap.swift in Sources */,
 				7CB23F4B1BA407F10014022B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,7 +307,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -330,7 +346,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
