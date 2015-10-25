@@ -78,7 +78,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     func scrollViewDidEndScrollingAnimation(sView: UIScrollView) {
         if sView == tableView {
-            if let ip = tableView.indexPathForSelectedRow() {
+            if let ip = tableView.indexPathForSelectedRow {
                 tableView.deselectRowAtIndexPath(ip, animated: true)
             }
         }
@@ -91,7 +91,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("PavilionCell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("PavilionCell", forIndexPath: indexPath)
         
         let p = pavilions[indexPath.row]
         cell.textLabel?.text = p.name

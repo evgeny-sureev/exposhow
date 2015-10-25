@@ -31,7 +31,7 @@ class ImageMap: UIView {
         addSubview(light)
     }
     
-    func hightlight(var area: CGRect) {
+    func hightlight(let area: CGRect) {
         light.frame = area
         light.alpha = 0.4
         

@@ -20,10 +20,10 @@ class PavilionsMap {
     var pavilions:[Pavilion]
     
     init() {
-        let pavilionsFile = NSBundle.mainBundle().resourcePath!.stringByAppendingPathComponent("pavilions.csv")
+        let pavilionsURL = NSBundle.mainBundle().resourceURL?.URLByAppendingPathComponent("pavilions.csv")
 
         pavilions = []
-        if let csv_file = String(contentsOfFile: pavilionsFile, encoding: NSUTF8StringEncoding) {
+        if let csv_file = try? String(contentsOfURL: pavilionsURL!, encoding: NSUTF8StringEncoding) {
             csv_file.stringByTrimmingCharactersInSet(NSCharacterSet.newlineCharacterSet()).enumerateLines { line, stop in
                 let values = line.componentsSeparatedByCharactersInSet(NSCharacterSet(charactersInString: ";"))
                 if values.count != 6 {
@@ -31,18 +31,18 @@ class PavilionsMap {
                 }
                 let name = values[0]
                 let pavilion = values[1]
-                let x = values[2].toInt()
-                let y = values[3].toInt()
-                let width = values[4].toInt()
-                let height = values[5].toInt()
+                let x = Int(values[2])
+                let y = Int(values[3])
+                let width = Int(values[4])
+                let height = Int(values[5])
                 if let x = x, let y = y, let width = width, let height = height {
                     self.pavilions.append(Pavilion(name: name, pavilion: pavilion, position: CGRect(x: x, y: y, width: width, height: height)))
                 }
             }
         } else {
-            println("Error opening file")
+            print("Error opening file")
         }
-        pavilions.sort { $0.name.lowercaseString < $1.name.lowercaseString }
+        pavilions.sortInPlace { $0.name.lowercaseString < $1.name.lowercaseString }
     }
     
     var count:Int {
